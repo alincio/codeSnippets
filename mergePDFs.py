@@ -2,12 +2,12 @@
 #This code merges all .pdf files in execution path and pages 1 and 5 of filenames containing "Gestiune"
 
 import os
-from PyPDF2 import PdfFileMerger
+from PyPDF2 import PdfMerger
 from datetime import datetime
 
 x = [a for a in os.listdir() if a.endswith(".pdf")]
 print (x)
-merger = PdfFileMerger()
+merger = PdfMerger()
 for pdf in x:
     #print (pdf.__contains__("Gestiune"))
     if (pdf.__contains__("Gestiune")):
